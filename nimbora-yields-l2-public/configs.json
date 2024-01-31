@@ -1,0 +1,28 @@
+{
+  "goerli": {
+    "dai": "0x3e85bfbb8e2a42b7bead9e88e9a1b19dbccf661471061807292120462396ec9",
+    "l2PoolingManager": "",
+    "factory": "",
+    "l2DaiBridge": "0x57b7fe4e59d295de5e7955c373023514ede5b972e872e9aa5dcdf563f5cfacb",
+    "l1DaiBridge": "0xaB00D7EE6cFE37cCCAd006cEC4Db6253D7ED3a22",
+    "POOLING_MANAGER_CLASS_HASH": "0x05adb7661d0dcb3cc5fbe69380846fb7662c92f1943fcf609c51b756cae7d411",
+    "TOKEN_MANAGER_CLASS_HASH": "0x03be98338455134abae1d830802a162cd81b24ddb38a868ec9c6a4341ecd7210",
+    "TOKEN_MOCK_CLASS_HASH": "0x00da57dbb24ceb46a3901f148442e0d591528baba485ee84ed6d4948dedf12e5",
+    "TOKEN_CLASS_HASH": "0x0720f601c0432ab03e12df99c2b215e7ab9a9c12e1b4d8b0473e18bbb3213bea",
+    "TOKEN_BRIDGE_CLASS_HASH": "0x00de6d9bd84775dd221273e833dc44946da586483cf822e0021385de95964700",
+    "FACTORY_CLASS_HASH": "0x0581277daf0e409c2537979108b7eb4a5cec3624db552c35f8f6acc9a3ac937b"
+  },
+  "mainnet": {
+    "dai": "",
+    "l2PoolingManager": "",
+    "factory": "",
+    "l2DaiBridge": "",
+    "l1DaiBridge": "",
+    "POOLING_MANAGER_CLASS_HASH": "",
+    "TOKEN_MANAGER_CLASS_HASH": "",
+    "TOKEN_MOCK_CLASS_HASH": "",
+    "TOKEN_CLASS_HASH": "",
+    "TOKEN_BRIDGE_CLASS_HASH": "",
+    "FACTORY_CLASS_HASH": ""
+  }
+}
