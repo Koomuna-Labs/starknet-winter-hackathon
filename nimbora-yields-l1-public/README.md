@@ -4,6 +4,13 @@
 
 Yield Dex L1 is an advanced platform designed to streamline Layer 2 (L2) financial requests and responses. It integrates various contracts to facilitate smooth operations between different blockchain layers and financial strategies. Below is an improved overview of its components:
 
+## Aave Strategy
+
+deploying "DefaultProxyAdmin" (tx: 0x51a59c80b4f671aa93b4052e4344bd787ea76ef612484d8474ec88efd4154128)...: deployed at 0x9DfDB9AfD6f23974114AFf71c708E6951A04B684
+deploying "PoolingManager_Implementation" (tx: 0x7ec6855dfad0116ef848796e8861434550c599364b6fa986b887ebf520eda20a)...: deployed at 0xe3A697d9730F6211AaA057aA03C3b496a62beb08
+deploying "PoolingManager_Proxy" (tx: 0xe8501f1b955b1a8f494cf722c48ae5d58bf36cf66a5d510e041d3dfedc4fd7bd)...: deployed at 0x274dBB4932f645BcFea2b83425FF37222871c3fF
+Pooling manager contract deployed at 0x274dBB4932f645BcFea2b83425FF37222871c3fF
+
 ### Contracts Overview
 
 1. **Pooling Manager (`PoolingManager.sol.sol`)**: Acts as a central hub, interfacing between bridges, StarkNet Core, and various financial strategies.
