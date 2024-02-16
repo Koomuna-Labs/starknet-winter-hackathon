@@ -20,6 +20,14 @@
       "strategy": "0x9Fe0DCcA65378208ac8C46A3A2397e530859748f",
       "underlying": "0x11fE4B6AE13d2a6055C8D9cF65c55bac32B5d844",
       "bridge": "0xaB00D7EE6cFE37cCCAd006cEC4Db6253D7ED3a22"
+    },
+    "usdc":"0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
+    "ausdc":"0x16dA4541aD1807f4443d92D26044C1147406EB80",
+    "usdcBridge":"0xba9ce9f22a3cfa7fcb5c31f6b2748b1e72c06204",
+    "aaveStrategy": {
+      "strategy": "0x9Fe0DCcA65378208ac8C46A3A2397e530859748f",
+      "underlying": "0x94a9D9AC8a22534E3FaCa9F4e7F2E2cf85d5E4C8",
+      "bridge": "0xba9ce9f22a3cfa7fcb5c31f6b2748b1e72c06204"
     }
   },
   "mainnet": {

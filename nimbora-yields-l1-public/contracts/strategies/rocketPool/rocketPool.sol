@@ -11,7 +11,7 @@ import {IRocketStorage} from "../../interfaces/IRocketStorage.sol";
 // goerli RocketDepositPool 0xa9A6A14A3643690D0286574976F45abBDAD8f505
 // goerli RocketStorage 0xd8Cd47263414aFEca62d6e2a3917d6600abDceB3
 
-contract RocketPoolStakingStrategy is  StrategyBase {
+contract RocketPoolStakingStrategy is StrategyBase {
      IRocketStorage public rocketStorage;
      IRocketDepositPool public rocketDepositPool;
 
@@ -41,7 +41,7 @@ contract RocketPoolStakingStrategy is  StrategyBase {
 
     function _deposit(uint256 amount) internal override {
         rocketDepositPool = _getRocketDepositPool();
-        rocketDepositPool{value: amount}.deposit();
+        rocketDepositPool.deposit{value: amount}();
     }
 
     function _withdraw(uint256 amount) internal override returns (uint256) {
