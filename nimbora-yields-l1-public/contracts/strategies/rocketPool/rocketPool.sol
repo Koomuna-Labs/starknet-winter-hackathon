@@ -1,10 +1,9 @@
 // SPDX-License-Identifier: Apache-2.0
 pragma solidity ^0.8.20;
 
-// import {StrategyBase} from "../StrategyBase.sol";
-// import {ErrorLib} from "../../lib/ErrorLib.sol";
-// import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-// import {ISavingDai} from "../../interfaces/ISavingDai.sol";
+import {StrategyBase} from "../StrategyBase.sol";
+import {ErrorLib} from "../../lib/ErrorLib.sol";
+import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import {IRETH} from "../../interfaces/IRETH.sol";
 import {IRocketDepositPool} from "../../interfaces/IRocketDepositPool.sol";
 import {IRocketStorage} from "../../interfaces/IRocketStorage.sol";
@@ -12,7 +11,7 @@ import {IRocketStorage} from "../../interfaces/IRocketStorage.sol";
 // goerli RocketDepositPool 0xa9A6A14A3643690D0286574976F45abBDAD8f505
 // goerli RocketStorage 0xd8Cd47263414aFEca62d6e2a3917d6600abDceB3
 
-contract RocketPoolStakingStrategy is  Initializable /* StrategyBase */ {
+contract RocketPoolStakingStrategy is  StrategyBase {
      IRocketStorage public rocketStorage;
      IRocketDepositPool public rocketDepositPool;
 
@@ -26,7 +25,7 @@ contract RocketPoolStakingStrategy is  Initializable /* StrategyBase */ {
         address _rocketStorageAddress
     ) public virtual initializer {
         // underlying token hardcoded? RP dice generar dinamicamente
-        // initializeStrategyBase(_poolingManager, _underlyingToken, _yieldToken);
+        initializeStrategyBase(_poolingManager, _underlyingToken, _yieldToken);
         _initializeRocketPool(_rocketStorageAddress);
     }
 
@@ -52,13 +51,12 @@ contract RocketPoolStakingStrategy is  Initializable /* StrategyBase */ {
          return (amount);
     }
 
-    //?
-    /*function _underlyingToYield(uint256 amount) internal view override returns (uint256) {
-        return ISavingDai(yieldToken).previewDeposit(amount);
+    
+    function _underlyingToYield(uint256 amount) internal view override returns (uint256) {
+        return IRETH(yieldToken).previewDeposit(amount);
     }
 
-    //?
     function _yieldToUnderlying(uint256 amount) internal view override returns (uint256) {
-        return ISavingDai(yieldToken).previewRedeem(amount);
-    }*/
+        return IRETH(yieldToken).previewRedeem(amount);
+    }
 }
